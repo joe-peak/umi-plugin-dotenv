@@ -6,7 +6,7 @@ export default function dotEnv(api: IApi) {
   const deployEnv = process.env.DEPLOY_ENV || 'dev';
 
   api.describe({
-    key: 'dotEnv',
+    key: 'dotenv',
     config: {
       default: {
         path: join(api.cwd, './config', `./.env.${deployEnv}`)
