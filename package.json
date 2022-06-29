@@ -6,7 +6,8 @@
   "author": "lon.c.zhou@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "npx babel index.ts -o lib/index.js",
+    "clean": "rm -rf lib",
+    "build": "npm run clean & npx babel index.ts -o lib/index.js",
     "release": "npm run build & npm version patch & npm publish",
     "lint": "yarn lint:format && yarn lint:es",
     "lint-fix": "yarn lint:format-fix && yarn lint:es-fix",
