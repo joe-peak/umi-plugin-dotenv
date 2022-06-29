@@ -1,5 +1,5 @@
 # dalton-umi-plugin-dotenv
-基于 umi4的 umi dotenv 插件，从.env 文件中加载环境变量
+基于 umi4 的 umi dotenv 插件，从.env 文件中加载环境变量
 
 [![NPM](https://img.shields.io/npm/l/dalton-umi-plugin-dotenv)](https://github.com/joe-peak/dalton-umi-plugin-dotenv)
 [![npm](https://img.shields.io/npm/v/dalton-umi-plugin-dotenv)](https://github.com/joe-peak/dalton-umi-plugin-dotenv)
