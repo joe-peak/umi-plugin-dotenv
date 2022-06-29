@@ -1,15 +1,16 @@
-import { join } from 'path'
+import path from 'path'
 import { IApi } from 'umi';
 import DotEnv from 'dotenv-webpack'
 
 export default function dotEnv(api: IApi) {
   const deployEnv = process.env.DEPLOY_ENV || 'dev';
+  const key = 'dotenv';
 
   api.describe({
-    key: 'dotenv',
+    key,
     config: {
       default: {
-        path: join(api.cwd, './config', `./.env.${deployEnv}`)
+        path: path.join(api.cwd, './config', `./.env.${deployEnv}`)
       },
       schema(joi){
         return joi.object({
@@ -18,10 +19,10 @@ export default function dotEnv(api: IApi) {
       },
     },
     enableBy: api.EnableBy.register,
-  })
+  });
 
   api.chainWebpack(memo => {
-    memo.plugin('dotEnv').use(DotEnv, [{ path: api.config.dotEnv?.path}]);
+    memo.plugin('dotenv').use(DotEnv, [{ path: api.config[key]?.path}]);
     return memo;
   });
 }
