@@ -1,0 +1,33 @@
+{
+  "name": "dalton-umi-plugin-dotenv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/joe-peak/umi-plugin-dotenv.git",
+  "author": "lon.c.zhou@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "lint": "yarn lint:format && yarn lint:es",
+    "lint-fix": "yarn lint:format-fix && yarn lint:es-fix",
+    "lint:format": "prettier './**/*.{js,jsx,ts,tsx,css,scss,less,html,json,md}'",
+    "lint:format-fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,less,html,json,md}'",
+    "lint:es": "eslint src --ext js,jsx,ts,tsx",
+    "lint:es-fix": "eslint  --ext js,jsx,ts,tsx --fix"
+  },
+  "devDependencies": {
+    "eslint-config-dalton": "^1.0.2",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "dotenv-webpack": "^7.1.1",
+    "umi": "^4.0.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{css,scss,less,html,json,md}": [
+      "prettier --write"
+    ]
+  }
+}
