@@ -13,6 +13,11 @@
     "lint:es": "eslint src --ext js,jsx,ts,tsx",
     "lint:es-fix": "eslint  --ext js,jsx,ts,tsx --fix"
   },
+  "keywords": [
+    "umi",
+    "plugin",
+    "dotenv-webpack"
+  ],
   "devDependencies": {
     "eslint-config-dalton": "^1.0.2",
     "prettier": "^2.7.1"
