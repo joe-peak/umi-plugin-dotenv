@@ -1,13 +1,10 @@
 # dalton-umi-plugin-dotenv
-umi dotenv 插件，从.env 文件中加载环境变量
+基于 umi4的 umi dotenv 插件，从.env 文件中加载环境变量
 
 [![NPM](https://img.shields.io/npm/l/dalton-umi-plugin-dotenv)](https://github.com/joe-peak/dalton-umi-plugin-dotenv)
 [![npm](https://img.shields.io/npm/v/dalton-umi-plugin-dotenv)](https://github.com/joe-peak/dalton-umi-plugin-dotenv)
-[![npm](https://img.shields.io/npm/dm/dalton-umi-plugin-dotenv?color=%23EC407A)](https://www.npmjs.com/package/dalton-umi-plugin-dotenv)
-[![node-current](https://img.shields.io/node/v/dalton-umi-plugin-dotenv?color=red&label=node)](https://github.com/joe-peak/dalton-umi-plugin-dotenv)
-[![Install size](https://badgen.net/packagephobia/install/dalton-umi-plugin-dotenv)](https://github.com/joe-peak/dalton-umi-plugin-dotenv)
-
 [![publish size](https://badgen.net/packagephobia/publish/dalton-umi-plugin-dotenv)](https://github.com/joe-peak/dalton-umi-plugin-dotenv)
+[![npm](https://img.shields.io/npm/dm/dalton-umi-plugin-dotenv?color=%23EC407A)](https://www.npmjs.com/package/dalton-umi-plugin-dotenv)
 ### 安装
 
 ```bash
