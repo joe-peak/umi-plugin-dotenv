@@ -1,8 +1,8 @@
-const { IApi } = require('umi');
-const path = require('path');
-const DotEnv = require('dotenv-webpack');
+import { IApi } from 'umi'
+import path from 'path';
+import DotEnv from 'dotenv-webpack';
 
-export default function dotEnv(api: typeof IApi) {
+export default function dotEnv(api: IApi) {
   const deployEnv = process.env.DEPLOY_ENV || 'dev';
   const key = 'dotenv';
 
