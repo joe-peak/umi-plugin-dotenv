@@ -1,6 +1,6 @@
-import { IApi } from 'umi'
-import path from 'path';
 import DotEnv from 'dotenv-webpack';
+import path from 'path';
+import { IApi } from 'umi';
 
 export default function dotEnv(api: IApi) {
   const deployEnv = process.env.DEPLOY_ENV || 'dev';
@@ -10,19 +10,19 @@ export default function dotEnv(api: IApi) {
     key,
     config: {
       default: {
-        path: path.join(api.cwd, './config', `./.env.${deployEnv}`)
+        path: path.join(api.cwd, './config', `./.env.${deployEnv}`),
       },
-      schema(joi){
+      schema(joi) {
         return joi.object({
-          path: joi.string()
+          path: joi.string(),
         });
       },
     },
     enableBy: api.EnableBy.register,
   });
 
-  api.chainWebpack(memo => {
-    memo.plugin('dotenv').use(DotEnv, [{ path: api.config[key]?.path}]);
+  api.chainWebpack((memo) => {
+    memo.plugin('dotenv').use(DotEnv, [{ path: api.config[key]?.path }]);
     return memo;
   });
 }
